@@ -1,26 +1,35 @@
 <script>
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
-  import Logo from "$lib/assets/fullLogo.png";
+  import Logo from "$lib/assets/fullLogoBlanco.png";
   import Fa from "svelte-fa";
   import { faTruckPlane, faBoxOpen } from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <nav
-  class="sticky hidden lg:fixed top-0 z-[-1] lg:z-50 navbar w-full bg-base-100 lg:flex
-  justify-between lg:px-24 lg:text-base"
+  class="hidden z-[-1] lg:z-50 navbar w-full bg-transparent lg:flex
+  justify-between lg:px-24 py-5 lg:text-base absolute top-0"
 >
   <a href="/">
     <img src={Logo} class="w-36" alt="DropCargo Express Logo" />
   </a>
-  <ul class="menu menu-vertical lg:menu-horizontal lg:text-base">
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/tracking">Tracking</a></li>
-    <li><a href="/registrar">Abrir Cuenta</a></li>
+  <ul
+    class="menu menu-vertical lg:menu-horizontal lg:text-base
+    text-secondary-content"
+  >
+    <li><a class="hover:bg-white hover:text-black" href="/">Inicio</a></li>
+    <li>
+      <a class="hover:bg-white hover:text-black" href="/tracking">Tracking</a>
+    </li>
+    <li>
+      <a class="hover:bg-white hover:text-black" href="/registrar"
+        >Abrir Cuenta</a
+      >
+    </li>
   </ul>
 </nav>
 
-<nav class="lg:hidden navbar p-3 bg-base-100 grid place-items-center">
+<nav class="lg:hidden navbar px-10 py-5 bg-transparent absolute top-0 z-[50]">
   <a href="/">
     <img src={Logo} class="w-32" alt="DropCargo Express Logo" />
   </a>

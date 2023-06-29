@@ -70,7 +70,7 @@
           cualquier parte del mundo.
         </p>
       </div>
-      <AbrirCasillero />
+      <!-- <AbrirCasillero /> -->
     </div>
   {/if}
 </div>
@@ -129,7 +129,6 @@
       >
     </div>
   </div>
-  <!-- <Wave1 /> -->
 </div>
 
 <div class="hero bg-base-100 text-neutral-focus p-8 lg:p-0 lg:my-16">
