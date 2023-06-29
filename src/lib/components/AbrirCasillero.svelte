@@ -52,10 +52,14 @@
       registering = false;
     }
   }
+
+  export let hide: boolean;
 </script>
 
 <form
-  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100 text-neutral-focus"
+  class="{hide
+    ? 'hidden'
+    : ''} card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100 text-neutral-focus"
   method="POST"
   on:submit|preventDefault={(e) => crearUsuario(e)}
 >
@@ -152,7 +156,7 @@
       </div>
     </div>
     <div class="form-control mt-6">
-      <button type="submit" class="btn btn-neutral">
+      <button type="submit" class="btn btn-secondary">
         {#if registering}
           <span class="loading loading-spinner loading-md" />
         {:else}

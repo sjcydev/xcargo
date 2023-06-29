@@ -41,6 +41,8 @@
 
   let ready = false;
   onMount(() => (ready = true));
+
+  let hide = true;
 </script>
 
 <svelte:head>
@@ -50,7 +52,7 @@
 </svelte:head>
 
 <div
-  class="hero min-h-screen relative"
+  class="hero min-h-screen relative justify-items-start"
   style="background-image:
   url(https://images.unsplash.com/photo-1645526816847-74a7640b8b7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)"
 >
@@ -58,19 +60,27 @@
   {#if ready}
     <div
       in:blur={{ duration: 750, amount: 2 }}
-      class="hero-content text-center text-secondary-content flex-col
-    lg:flex-row lg:gap-10 mb-20 mt-5 lg:my-0"
+      class="hero-content text-secondary-content flex-col
+    lg:flex-row lg:gap-10 mb-20 lg:px-28 mt-5 lg:my-0 max-w-full w-full justify-between"
     >
       <div class="text-left p-4 lg:p-0">
-        <h1 class="titulo mb-5 text-4xl lg:text-5xl font-medium">
-          Agencia de Carga Internacional con base en Miami y Panamá
+        <h1 class="titulo mb-5 text-4xl lg:text-8xl font-semibold">
+          Delivery <span class="block">Rapido & Seguro</span>
         </h1>
-        <p class="mb-5">
+        <p class="mb-5 lg:text-lg">
           Te facilitamos tus compras por internet. Recibe todas tus compras del
           cualquier parte del mundo.
         </p>
+        <button
+          class="btn btn-secondary max-[1024px]:w-full"
+          on:click={() => (hide = false)}>Abre tu Casillero Gratis</button
+        >
       </div>
-      <!-- <AbrirCasillero /> -->
+      {#if !hide}
+        <div in:blur={{ duration: 750, amount: 2 }}>
+          <AbrirCasillero {hide} />
+        </div>
+      {/if}
     </div>
   {/if}
 </div>

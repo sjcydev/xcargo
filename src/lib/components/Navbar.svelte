@@ -8,7 +8,7 @@
 
 <nav
   class="hidden z-[-1] lg:z-50 navbar w-full bg-transparent lg:flex
-  justify-between lg:px-24 py-5 lg:text-base absolute top-0"
+  justify-between lg:px-28 py-5 lg:text-base absolute top-0"
 >
   <a href="/">
     <img src={Logo} class="w-36" alt="DropCargo Express Logo" />
