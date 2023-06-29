@@ -132,7 +132,7 @@
   <!-- <Wave1 /> -->
 </div>
 
-<div class="hero bg-base-100 text-neutral-focus p-8 lg:p-0 lg:my-12">
+<div class="hero bg-base-100 text-neutral-focus p-8 lg:p-0 lg:my-16">
   <div class="hero-content text-center">
     <div>
       <h1 class="text-3xl lg:text-4xl font-bold mb-12">Nuestros Servicios</h1>
@@ -187,7 +187,7 @@
 <div class="hero lg:h-fit relative bg-base-100">
   <div class="hero-content text-netural-focus justify-stretch w-full md:p-8">
     <div class="grid md:grid-cols-2 lg:place-content-center lg:align-top">
-      <div class="w-full p-5">
+      <div class="w-full p-5 md:pl-10">
         <h1 class="mb-3 text-3xl font-medium">Horario</h1>
         <div>
           <div class="mb-2">
