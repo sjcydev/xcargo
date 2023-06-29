@@ -12,9 +12,7 @@
   } from "svelte-email";
 
   let logo =
-    "https://res.cloudinary.com/dx312n0ce/image/upload/f_auto,q_auto/wwssl6h9nifcwvmghrqy";
-  let logoNombre =
-    "https://res.cloudinary.com/dx312n0ce/image/upload/f_auto,q_auto/vvvwedj4hjflqnlhpwzj";
+    "https://res.cloudinary.com/dx312n0ce/image/upload/f_auto,q_auto/afmap1bg1ucjzl5fbd4s";
 
   const preview = "Nuevo Casillero Registrado";
   export let nombre: String;
@@ -24,7 +22,7 @@
   export let cedula: String;
   export let telefono: String;
 
-  let codigo_de_compania = "DROP";
+  let codigo_de_compania = "XC";
   let direccion = {
     direccion1: "7854 NW 46TH ST UNIT 2",
     estado: "FLORIDA",
@@ -77,13 +75,7 @@
   };
 
   const logoIcon = {
-    width: "2.75rem",
-    height: "auto",
-    "margin-right": "0.5rem",
-  };
-
-  const logoName = {
-    width: "8rem",
+    width: "17rem",
     height: "auto",
   };
 
@@ -105,16 +97,7 @@
           width="30"
           height="30"
           style={logoIcon}
-          alt="DropCargoExpress
-        Logo"
-        />
-        <Img
-          src={logoNombre}
-          width="30"
-          height="30"
-          style={logoName}
-          alt="DropCargoExpress
-        Logo"
+          alt="XCargoServices Logo"
         />
       </Container>
       <Heading style={heading}>Nuevo Casillero Registrado</Heading>
