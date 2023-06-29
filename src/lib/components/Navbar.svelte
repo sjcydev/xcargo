@@ -1,19 +1,17 @@
 <script>
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
-  import Logo from "$lib/assets/logo.png";
-  import LogoName from "$lib/assets/logoNombre.png";
+  import Logo from "$lib/assets/fullLogo.png";
   import Fa from "svelte-fa";
   import { faTruckPlane, faBoxOpen } from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <nav
-  class="sticky hidden lg:fixed top-0 z-50 navbar w-full bg-base-200 lg:flex
+  class="sticky hidden lg:fixed top-0 z-[-1] lg:z-50 navbar w-full bg-base-100 lg:flex
   justify-between lg:px-24 lg:text-base"
 >
   <a href="/">
-    <img src={Logo} class="w-11 mr-2" alt="DropCargo Express Logo" />
-    <img src={LogoName} class="w-32" alt="DropCargo Express Logo" />
+    <img src={Logo} class="w-36" alt="DropCargo Express Logo" />
   </a>
   <ul class="menu menu-vertical lg:menu-horizontal lg:text-base">
     <li><a href="/">Inicio</a></li>
@@ -22,13 +20,12 @@
   </ul>
 </nav>
 
-<nav class="lg:hidden navbar p-3 bg-base-200 grid place-items-center">
+<nav class="lg:hidden navbar p-3 bg-base-100 grid place-items-center">
   <a href="/">
-    <img src={Logo} class="w-11 mr-2" alt="DropCargo Express Logo" />
-    <img src={LogoName} class="w-32" alt="DropCargo Express Logo" />
+    <img src={Logo} class="w-32" alt="DropCargo Express Logo" />
   </a>
 </nav>
-<nav class="fixed z-50 navbar lg:hidden">
+<nav class="fixed bottom-0 z-50 navbar lg:hidden">
   <div class="btm-nav">
     <button
       class={$page.url.pathname === "/" ? "active" : ""}

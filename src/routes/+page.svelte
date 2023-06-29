@@ -11,6 +11,7 @@
     faClock,
     faComments,
     faMapLocationDot,
+    faPhone,
   } from "@fortawesome/free-solid-svg-icons";
   import { goto } from "$app/navigation";
 
@@ -36,26 +37,29 @@
     },
   ];
 
-  let direccionMapa = "https://maps.app.goo.gl/w8SLQSWZCCbS2sQa8?g_st=iw";
+  let direccionMapa = "https://maps.app.goo.gl/6umy2Deq1bqTzmZT6?g_st=ic";
 
   let ready = false;
   onMount(() => (ready = true));
 </script>
 
 <svelte:head>
-  <title>Agencia de Carga Internacional con Base en Miami y Panama</title>
+  <title
+    >XCargo Services - Agencia de Carga Internacional con Base en Miami y Panama</title
+  >
 </svelte:head>
 
 <div
   class="hero min-h-screen relative"
-  style="background-image: url(https://images.unsplash.com/photo-1571086291540-b137111fa1c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80);"
+  style="background-image:
+  url(https://images.unsplash.com/photo-1645526816847-74a7640b8b7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)"
 >
-  <div class="hero-overlay bg-opacity-60" />
+  <div class="hero-overlay bg-opacity-30" />
   {#if ready}
     <div
       in:blur={{ duration: 750, amount: 2 }}
-      class="hero-content text-center text-primary-content flex-col
-    lg:flex-row-reverse lg:gap-10 mb-32 lg:mb-0"
+      class="hero-content text-center text-secondary-content flex-col
+    lg:flex-row lg:gap-10 mb-20 mt-5 lg:my-0"
     >
       <div class="text-left p-4 lg:p-0">
         <h1 class="titulo mb-5 text-4xl lg:text-5xl font-medium">
@@ -69,11 +73,10 @@
       <AbrirCasillero />
     </div>
   {/if}
-  <Wave1 />
 </div>
 
 <div
-  class="card text-primary-content grid place-items-center px-10 lg:px-20 mb-10"
+  class="card text-neutral-focus grid place-items-center px-10 lg:px-20 my-10"
 >
   <div class="grid lg:grid-cols-2 w-full lg:w-3/4 place-items-center">
     <div>
@@ -103,7 +106,7 @@
       </p>
       <div class="text-right">
         <button
-          class="btn btn-primary max-[1024px]:w-full"
+          class="btn btn-neutral max-[1024px]:w-full"
           on:click={() => goto("/registrar")}>Consigue tu Casillero</button
         >
       </div>
@@ -112,24 +115,24 @@
 </div>
 
 <div
-  class="hero h-[38em] relative"
+  class="hero h-[27em] relative"
   style="background-image:
     url(https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80);"
 >
-  <div class="hero-overlay bg-opacity-50" />
-  <div class="hero-content text-center text-primary-content">
+  <div class="hero-overlay bg-opacity-30" />
+  <div class="hero-content text-center text-secondary-content">
     <div class="max-w-md">
       <h1 class="mb-5 text-4xl lg:text-5xl font-bold">Una vez en Miami</h1>
       <p class="mb-5">Le entregamos su paquete en 48 horas!</p>
-      <button class="btn btn-primary" on:click={() => goto("/registrar")}
+      <button class="btn btn-neutral" on:click={() => goto("/registrar")}
         >Comprar en Linea</button
       >
     </div>
   </div>
-  <Wave1 />
+  <!-- <Wave1 /> -->
 </div>
 
-<div class="hero bg-base-100 text-primary-content p-12 lg:p-0 mb-10">
+<div class="hero bg-base-100 text-neutral-focus p-8 lg:p-0 lg:my-12">
   <div class="hero-content text-center">
     <div>
       <h1 class="text-3xl lg:text-4xl font-bold mb-12">Nuestros Servicios</h1>
@@ -158,12 +161,12 @@
 </div>
 
 <div
-  class="hero lg:h-[34em] relative"
+  class="hero lg:h-[30em] relative"
   style="background-image:
     url(https://images.unsplash.com/photo-1633174524827-db00a6b7bc74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1496&q=80);"
 >
-  <div class="hero-overlay bg-opacity-50" />
-  <div class="hero-content text-center text-primary-content">
+  <div class="hero-overlay bg-opacity-40" />
+  <div class="hero-content text-center text-secondary-content py-20 px-16">
     <div class="max-w-md">
       <h1 class="mb-5 text-3xl lg:text-5xl font-medium">
         Abre tu cuenta totalmente
@@ -174,7 +177,7 @@
         tu casilla hoy, es GRATIS Ofrecemos también el servicio a domicilio, el
         costo depende del área de entrega.
       </p>
-      <button class="btn btn-primary" on:click={() => goto("/registrar")}
+      <button class="btn btn-neutral" on:click={() => goto("/registrar")}
         >Abre tu Cuenta Gratis</button
       >
     </div>
@@ -182,9 +185,9 @@
 </div>
 
 <div class="hero lg:h-fit relative bg-base-100">
-  <div class="hero-content text-primary-content">
-    <div class="grid lg:grid-cols-2 place-items-center">
-      <div class="w-full p-5 lg:p-20">
+  <div class="hero-content text-netural-focus justify-stretch w-full md:p-8">
+    <div class="grid md:grid-cols-2 lg:place-content-center lg:align-top">
+      <div class="w-full p-5">
         <h1 class="mb-3 text-3xl font-medium">Horario</h1>
         <div>
           <div class="mb-2">
@@ -199,32 +202,24 @@
           <p>Cerrado</p>
         </div>
       </div>
-      <div class="p-5 mb-10 lg:p-20">
-        <h2 class="text-2xl font-medium mb-1">DropCargo Express</h2>
+      <div class="p-5 mb-10">
+        <h2 class="text-3xl font-medium mb-1">xCargo Services</h2>
         <div class="grid lg:grid-cols-2 lg:gap-10 mb-3">
           <div>
-            <p>Primario</p>
             <a
               href="https://wa.me/+50766302373"
               class="text-lg mb-2 flex place-items-center gap-2"
               target="_blank"
             >
-              <!-- <Fa icon={faPhone} /> --> +507 6630-2373
-            </a>
-          </div>
-          <div>
-            <p>Secundario</p>
-            <a
-              href="https://wa.me/+50767885008"
-              class="text-lg mb-2 flex place-items-center gap-2"
-              target="_blank"
-            >
-              <!--  <Fa class="text-2xl" icon={faWhatsapp} /> --> +507 6788-5008
+              <Fa icon={faPhone} /> +507 6362-8879
             </a>
           </div>
         </div>
-        <p class="mb-1 text-base">Miraflores</p>
-        <p class="mb-6 text-sm">Calle 79B Oeste, Casa 195</p>
+        <p class="mb-1 text-base">La Chorrera</p>
+        <p class="mb-6 text-sm">
+          Barrio Balboa, Ave Ricardo J. Alfaro (Calle Rockefeller), Pb
+          Autoservicio Mario
+        </p>
         <button
           class="btn btn-neutral"
           on:click={() => window.open(direccionMapa, "_blank")}

@@ -55,7 +55,7 @@
 </script>
 
 <form
-  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100"
+  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100 text-neutral-focus"
   method="POST"
   on:submit|preventDefault={(e) => crearUsuario(e)}
 >
@@ -70,8 +70,7 @@
         <input
           type="text"
           placeholder="Nombre"
-          class="input input-bordered
-        input-primary w-full"
+          class="input input-bordered w-full"
           bind:value={usuario.nombre}
           required
         />
@@ -81,7 +80,7 @@
           type="text"
           placeholder="Apellido"
           class="input input-bordered
-        input-primary w-full"
+        w-full"
           bind:value={usuario.apellido}
           required
         />
@@ -92,7 +91,7 @@
         type="text"
         placeholder="Correo"
         class="input input-bordered
-        input-primary"
+        "
         bind:value={usuario.correo}
         required
       />
@@ -102,7 +101,7 @@
         type="text"
         placeholder="Cedula o Pasaporte"
         class="input input-bordered
-        input-primary"
+        "
         bind:value={usuario.cedula}
         required
       />
@@ -112,7 +111,7 @@
         type="text"
         placeholder="Telefono"
         class="input input-bordered
-        input-primary"
+        "
         bind:value={usuario.telefono}
         required
       />
@@ -125,13 +124,12 @@
           <span class="label-text">Fecha de Nacimiento</span>
         </p>
         <SveltyPicker
-          inputClasses="input input-bordered input-primary"
+          inputClasses="input input-bordered "
           format="dd-mm-yyyy"
           placeholder="DD-MM-YYYY"
           todayBtn={false}
           endDate={maxDate}
           required
-          theme="my-colors"
           bind:value={usuario.nacimiento}
         />
       </div>
@@ -140,8 +138,8 @@
           <span class="label-text">Sexo</span>
         </p>
         <select
-          class="select select-primary w-full font-medium {usuario.sexo === ''
-            ? 'text-neutral-content'
+          class="select select-bordered w-full font-medium {usuario.sexo === ''
+            ? 'text-base-300'
             : ''}"
           bind:value={usuario.sexo}
           required
@@ -154,7 +152,7 @@
       </div>
     </div>
     <div class="form-control mt-6">
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-neutral">
         {#if registering}
           <span class="loading loading-spinner loading-md" />
         {:else}
@@ -164,17 +162,3 @@
     </div>
   </div>
 </form>
-
-<style>
-  :global(.my-colors) {
-    --sdt-primary: hsl(var(--p));
-    --sdt-color: #eee;
-    --sdt-color-selected: #eee;
-    --sdt-bg-main: hsl(var(--b1));
-    --sdt-bg-clear: #dc3545;
-    --sdt-clear-color: #dc3545;
-    --sdt-btn-bg-hover: hsl(var(--p));
-    --sdt-btn-header-bg-hover: hsl(var(--p));
-    --sdt-disabled-date: hsl(var(--nc));
-  }
-</style>
