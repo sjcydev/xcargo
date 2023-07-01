@@ -52,14 +52,10 @@
       registering = false;
     }
   }
-
-  export let hide: boolean;
 </script>
 
 <form
-  class="{hide
-    ? 'hidden'
-    : ''} card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100 text-neutral-focus"
+  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100 text-neutral-focus"
   method="POST"
   on:submit|preventDefault={(e) => crearUsuario(e)}
 >

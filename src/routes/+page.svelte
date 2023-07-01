@@ -1,21 +1,43 @@
 <script>
   import AbrirCasillero from "$lib/components/AbrirCasillero.svelte";
-  import Wave1 from "$lib/components/waves/Wave1.svelte";
   import { blur } from "svelte/transition";
   import { onMount } from "svelte";
 
   import Fa from "svelte-fa";
   import {
     faBoxesPacking,
-    faTruckFast,
     faClock,
     faComments,
     faMapLocationDot,
     faPhone,
+    faPlaneDeparture,
+    faShip,
+    faWarehouse,
   } from "@fortawesome/free-solid-svg-icons";
   import { goto } from "$app/navigation";
 
   let precio = "$2.75";
+
+  let servicios1 = [
+    {
+      titulo: "Carga Aérea",
+      contenido:
+        "Servicio de transporte rápido y seguro de mercancías por avión, ideal para tus compras en linea",
+      icono: faPlaneDeparture,
+    },
+    {
+      titulo: "Carga Marítima",
+      contenido:
+        "Solución económica y confiable para el transporte de grandes volúmenes de mercancías por barco a nivel internacional",
+      icono: faShip,
+    },
+    {
+      titulo: "Deposíto en Miami",
+      contenido:
+        "Nuestro depósito estratégicamente ubicado en Miami ofrece almacenamiento seguro y servicios de distribución eficientes para tus pedidos.",
+      icono: faWarehouse,
+    },
+  ];
 
   let servicios = [
     {
@@ -28,7 +50,7 @@
       titulo: "Servicio A Domicilio",
       contenido:
         "Entrega a domicilio en la Ciudad capital, coordinamos la entrega por encomienda al interior del país",
-      icono: faTruckFast,
+      icono: faShip,
     },
     {
       titulo: "Servicio al Cliente",
@@ -42,7 +64,7 @@
   let ready = false;
   onMount(() => (ready = true));
 
-  let hide = true;
+  // let hide = true;
 </script>
 
 <svelte:head>
@@ -61,34 +83,54 @@
     <div
       in:blur={{ duration: 750, amount: 2 }}
       class="hero-content text-secondary-content flex-col
-    lg:flex-row lg:gap-10 mb-20 lg:px-28 mt-5 lg:my-0 max-w-full w-full justify-between"
+    lg:flex-row my-20 md:px-20 min-[1235px]:px-36 lg:my-0 max-w-full w-full justify-between"
     >
       <div class="text-left p-4 lg:p-0">
-        <h1 class="titulo mb-5 text-4xl lg:text-8xl font-semibold">
-          Delivery <span class="block">Rapido & Seguro</span>
+        <h1
+          class="titulo mb-5 text-4xl min-[1024px]:text-6xl min-[1235px]:text-8xl font-semibold"
+        >
+          Delivery <span class="block">Rápido & Seguro</span>
         </h1>
-        <p class="mb-5 lg:text-lg">
+        <p class="mb-5 min-[1235px]:text-lg">
           Te facilitamos tus compras por internet. Recibe todas tus compras del
           cualquier parte del mundo.
         </p>
         <button
-          class="btn btn-secondary max-[1024px]:w-full"
-          on:click={() => (hide = false)}>Abre tu Casillero Gratis</button
+          class="btn btn-secondary hidden min-[1235px]:block max-[1024px]:w-full"
+          on:click={() => goto("/registrar")}>Abre tu Casillero Gratis</button
         >
       </div>
-      {#if !hide}
-        <div in:blur={{ duration: 750, amount: 2 }}>
-          <AbrirCasillero {hide} />
-        </div>
-      {/if}
+      <AbrirCasillero />
     </div>
   {/if}
+</div>
+
+<div class="grid place-items-center p-8">
+  <h1 class="text-center text-2xl lg:text-3xl font-semibold max-w-xl my-12">
+    Te aseguramos un rápido y seguro transporte para tus paquetes
+  </h1>
+  <div class="grid md:grid-cols-3 gap-8 md:gap-4 lg:gap-10">
+    {#each servicios1 as servicio}
+      <div
+        class="card bg-base-200
+      shadow-lg rounded-none max-w-sm"
+      >
+        <div class="p-7 md:p-8 lg:px-8 lg:pt-10 justify-start">
+          <Fa class="text-2xl text-secondary" icon={servicio.icono} />
+        </div>
+        <div class="card-body p-7 pt-0 md:p-8 md:pt-0 font-light">
+          <h2 class="card-title text-base lg:text-lg">{servicio.titulo}</h2>
+          <p class="text-sm lg:text-base">{servicio.contenido}</p>
+        </div>
+      </div>
+    {/each}
+  </div>
 </div>
 
 <div
   class="card text-neutral-focus grid place-items-center px-10 lg:px-20 my-10"
 >
-  <div class="grid lg:grid-cols-2 w-full lg:w-3/4 place-items-center">
+  <div class="lg:px-36 grid lg:grid-cols-2 w-full lg:w-3/4 place-items-center">
     <div>
       <div class="mb-10 grid place-items-center">
         <h2 class="text-2xl lg:text-4xl my-10">Tarifa Unica</h2>
