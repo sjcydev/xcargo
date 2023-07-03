@@ -152,7 +152,7 @@
       </div>
     </div>
     <div class="form-control mt-6">
-      <button type="submit" class="btn btn-neutral">
+      <button type="submit" class="btn btn-secondary">
         {#if registering}
           <span class="loading loading-spinner loading-md" />
         {:else}
