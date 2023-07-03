@@ -7,7 +7,6 @@
   import {
     faBoxesPacking,
     faClock,
-    faComments,
     faMapLocationDot,
     faPhone,
     faPlaneDeparture,
@@ -18,7 +17,7 @@
 
   let precio = "$2.75";
 
-  let servicios1 = [
+  let servicios = [
     {
       titulo: "Carga Aérea",
       contenido:
@@ -39,32 +38,10 @@
     },
   ];
 
-  let servicios = [
-    {
-      titulo: "Comodos Horarios",
-      contenido:
-        "Recoja su paquete en cualquier momento después del trabajo, estamos abiertos hasta las 5:00PM",
-      icono: faClock,
-    },
-    {
-      titulo: "Servicio A Domicilio",
-      contenido:
-        "Entrega a domicilio en la Ciudad capital, coordinamos la entrega por encomienda al interior del país",
-      icono: faShip,
-    },
-    {
-      titulo: "Servicio al Cliente",
-      contenido: "Atención las 24 horas del día a través de WhatsApp",
-      icono: faComments,
-    },
-  ];
-
   let direccionMapa = "https://maps.app.goo.gl/6umy2Deq1bqTzmZT6?g_st=ic";
 
   let ready = false;
   onMount(() => (ready = true));
-
-  // let hide = true;
 </script>
 
 <svelte:head>
@@ -110,7 +87,7 @@
     Te aseguramos un rápido y seguro transporte para tus paquetes
   </h1>
   <div class="grid md:grid-cols-3 gap-8 md:gap-4 lg:gap-10">
-    {#each servicios1 as servicio}
+    {#each servicios as servicio}
       <div
         class="card bg-base-200
       shadow-lg rounded-none max-w-sm"
@@ -124,6 +101,56 @@
         </div>
       </div>
     {/each}
+  </div>
+</div>
+
+<div class="hero bg-base-100">
+  <div
+    class="hero-content grid md:grid-cols-2 md:my-16 lg:my-24 px-6 place-items-center"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1620455800201-7f00aeef12ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+      class="max-w-md w-full shadow-xl"
+      alt="Bus con paquetes"
+    />
+    <div class="mb-10 mt-6">
+      <h1 class="text-3xl font-bold max-w-lg">
+        Solución Confiable para Compras en Internet
+      </h1>
+      <div class="max-w-lg">
+        <p class="py-6 text-justify">
+          Ofrecemos una solución integral y confiable para tus necesidades de
+          compras por internet.
+        </p>
+        <p class="pb-6 text-justify">
+          Nuestro equipo experto se encarga de gestionar eficientemente tus
+          envíos, brindando un servicio confiable y seguro en cada etapa del
+          proceso.
+        </p>
+        <p class="mb-12 text-justify">
+          Confía en nosotros para una compra fluida y un transporte confiable de
+          tus pedidos.
+        </p>
+      </div>
+      <button class="btn btn-secondary">Abre tu casillero</button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="hero h-[27em] relative"
+  style="background-image:
+    url(https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80);"
+>
+  <div class="hero-overlay bg-opacity-30" />
+  <div class="hero-content text-center text-secondary-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-4xl lg:text-5xl font-bold">Una vez en Miami</h1>
+      <p class="mb-5">Le entregamos su paquete en 48 horas!</p>
+      <button class="btn btn-secondary" on:click={() => goto("/registrar")}
+        >Comprar en Linea Ahora</button
+      >
+    </div>
   </div>
 </div>
 
@@ -158,54 +185,9 @@
       </p>
       <div class="text-right">
         <button
-          class="btn btn-neutral max-[1024px]:w-full"
+          class="btn btn-secondary max-[1024px]:w-full"
           on:click={() => goto("/registrar")}>Consigue tu Casillero</button
         >
-      </div>
-    </div>
-  </div>
-</div>
-
-<div
-  class="hero h-[27em] relative"
-  style="background-image:
-    url(https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80);"
->
-  <div class="hero-overlay bg-opacity-30" />
-  <div class="hero-content text-center text-secondary-content">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-4xl lg:text-5xl font-bold">Una vez en Miami</h1>
-      <p class="mb-5">Le entregamos su paquete en 48 horas!</p>
-      <button class="btn btn-neutral" on:click={() => goto("/registrar")}
-        >Comprar en Linea</button
-      >
-    </div>
-  </div>
-</div>
-
-<div class="hero bg-base-100 text-neutral-focus p-8 lg:p-0 lg:my-16">
-  <div class="hero-content text-center">
-    <div>
-      <h1 class="text-3xl lg:text-4xl font-bold mb-12">Nuestros Servicios</h1>
-      <div class="grid md:grid-cols-3 place-items-center w-full gap-10">
-        {#each servicios as servicio}
-          <div
-            class="card w-56 h-56 md:w-60 md:h-60 lg:w-72 lg:h-72 bg-base-300 shadow-xl"
-          >
-            <figure class="px-5 py-5 lg:px-10 lg:pt-10">
-              <Fa
-                class="text-3xl md:text-4xl lg:text-5xl"
-                icon={servicio.icono}
-              />
-            </figure>
-            <div class="card-body items-center text-center px-5 py-2 lg:p-8">
-              <h2 class="card-title text-base lg:text-lg">{servicio.titulo}</h2>
-              <p class="text-center text-sm lg:text-base">
-                {servicio.contenido}
-              </p>
-            </div>
-          </div>
-        {/each}
       </div>
     </div>
   </div>
@@ -228,7 +210,7 @@
         tu casilla hoy, es GRATIS Ofrecemos también el servicio a domicilio, el
         costo depende del área de entrega.
       </p>
-      <button class="btn btn-neutral" on:click={() => goto("/registrar")}
+      <button class="btn btn-secondary" on:click={() => goto("/registrar")}
         >Abre tu Cuenta Gratis</button
       >
     </div>
@@ -239,7 +221,9 @@
   <div class="hero-content text-netural-focus justify-stretch w-full md:p-8">
     <div class="grid md:grid-cols-2 lg:place-content-center lg:align-top">
       <div class="w-full p-5 md:pl-10">
-        <h1 class="mb-3 text-3xl font-medium">Horario</h1>
+        <h1 class="mb-3 text-3xl font-medium flex items-center gap-2">
+          <Fa icon={faClock} /> Horario
+        </h1>
         <div>
           <div class="mb-2">
             <p class="text-lg font-medium">Lunes - Viernes</p>

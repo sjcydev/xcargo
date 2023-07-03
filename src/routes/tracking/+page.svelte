@@ -52,13 +52,15 @@
             Conoce el estado actual de tu paquete
           </h2>
         </div>
-        <form class=" join w-full" on:submit|preventDefault={track}>
+        <form class="join w-full" on:submit|preventDefault={track}>
           <input
             class="input input-bordered join-item w-full mb-10"
             placeholder="Codigo de Rastreo"
             bind:value={trackInput}
           />
-          <button class="btn btn-neutral join-item" type="submit">Track</button>
+          <button class="btn btn-secondary join-item" type="submit"
+            >Track</button
+          >
         </form>
         <div id="track17-container" class="w-full" />
       </div>
