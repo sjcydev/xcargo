@@ -94,7 +94,7 @@ export const POST = async ({ request }: RequestEvent) => {
         email: "info@xcargoservices.com",
         name: "XCargo Services",
       },
-      to: [{ email: "sjcydev12@gmail.com" }],
+      to: [{ email: "xcargoservices68@gmail.com" }],
       subject: "Nuevo Casillero Registrado",
       htmlContent: admin,
       textContent: textAdmin,
