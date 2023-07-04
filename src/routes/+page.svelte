@@ -226,15 +226,11 @@
         </h1>
         <div>
           <div class="mb-2">
-            <p class="text-lg font-medium">Lunes - Viernes</p>
-            <p>9:00 AM - 5:00 PM</p>
-          </div>
-          <div class="mb-2">
-            <p class="text-lg font-medium">Sabado</p>
-            <p>10:00 AM - 4:00 PM</p>
+            <p class="text-lg font-medium">Lunes - Sabado</p>
+            <p>8:00 AM - 6:00 PM</p>
           </div>
           <p class="text-lg font-medium">Domingo</p>
-          <p>Cerrado</p>
+          <p>8:00 AM - 12:00 PM</p>
         </div>
       </div>
       <div class="p-5 mb-10">
