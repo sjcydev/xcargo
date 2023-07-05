@@ -15,7 +15,7 @@
   } from "@fortawesome/free-solid-svg-icons";
   import { goto } from "$app/navigation";
 
-  let precio = "$2.75";
+  let precio = "$2.50";
 
   let servicios = [
     {
