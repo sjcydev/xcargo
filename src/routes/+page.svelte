@@ -77,7 +77,9 @@
           on:click={() => goto("/registrar")}>Abre tu Casillero Gratis</button
         >
       </div>
-      <AbrirCasillero />
+      <div class="">
+        <AbrirCasillero />
+      </div>
     </div>
   {/if}
 </div>
@@ -201,7 +203,7 @@
     url(https://images.unsplash.com/photo-1633174524827-db00a6b7bc74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1496&q=80);"
 >
   <div class="hero-overlay bg-opacity-40" />
-  <div class="hero-content text-center text-secondary-content py-20 px-16">
+  <div class="hero-content text-center text-secondary-content py-20 px-14">
     <div class="max-w-md">
       <h1 class="mb-5 text-3xl lg:text-5xl font-medium">
         Abre tu cuenta totalmente
@@ -223,7 +225,9 @@
   <div class="hero-content text-netural-focus justify-stretch w-full md:p-8">
     <div class="grid md:grid-cols-2 lg:place-content-center lg:align-top">
       <div class="w-full p-5 md:pl-10">
-        <h1 class="mb-3 text-3xl font-medium flex items-center gap-2">
+        <h1
+          class="mb-3 text-2xl lg:text-3xl font-medium flex items-center gap-2"
+        >
           <Fa icon={faClock} /> Horario
         </h1>
         <div>
@@ -236,7 +240,7 @@
         </div>
       </div>
       <div class="p-5 mb-10">
-        <h2 class="text-3xl font-medium mb-1">xCargo Services</h2>
+        <h2 class="text-2xl lg:text-3xl font-medium mb-1">xCargo Services</h2>
         <div class="grid lg:grid-cols-2 lg:gap-10 mb-3">
           <div>
             <a

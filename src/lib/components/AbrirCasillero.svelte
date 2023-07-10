@@ -63,7 +63,7 @@
   method="POST"
   on:submit|preventDefault={(e) => crearUsuario(e)}
 >
-  <div class="card-body">
+  <div class="flex flex-auto flex-col lg:p-8 p-4 gap-2">
     <h1 class="text-2xl text-left font-medium tracking-wide">
       Abre Tu Casillero
     </h1>
