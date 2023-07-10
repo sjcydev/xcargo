@@ -30,7 +30,10 @@
 </nav>
 
 <nav
-  class="lg:hidden navbar px-10 py-5 bg-transparent fixed lg:absolute top-0 z-[50]"
+  class="lg:hidden navbar px-10 py-5 bg-transparent {$page.url.pathname ===
+  '/registrar'
+    ? 'fixed'
+    : 'absolute'} top-0 z-[50]"
 >
   <a href="/">
     <img src={Logo} class="w-32" alt="DropCargo Express Logo" />
