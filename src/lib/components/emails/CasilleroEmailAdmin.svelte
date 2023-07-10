@@ -135,7 +135,7 @@
         <br />
         Zip Code: {direccion.zip}
         <br />
-        Country: {direccion.pais}
+        Country: {direccion.ciudad}
         <br />
         Tel: {direccion.tel}
       </Text>
