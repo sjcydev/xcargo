@@ -3,6 +3,7 @@
   import axios from "axios";
   import { toast } from "@zerodevx/svelte-toast";
   import validateAll from "$lib/utils/form-check";
+  import { page } from "$app/stores";
 
   let maxDate = new Date();
   let usuario = {
@@ -56,7 +57,9 @@
 
 <form
   class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100
-  text-neutral-focus mt-16"
+  text-neutral-focus {$page.url.pathname === '/registrar'
+    ? 'my-16'
+    : ''} lg:my-0"
   method="POST"
   on:submit|preventDefault={(e) => crearUsuario(e)}
 >
