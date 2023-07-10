@@ -132,7 +132,9 @@
           tus pedidos.
         </p>
       </div>
-      <button class="btn btn-secondary">Abre tu casillero</button>
+      <button class="btn btn-secondary" on:click={() => goto("/registrar")}
+        >Abre tu casillero</button
+      >
     </div>
   </div>
 </div>

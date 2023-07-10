@@ -55,7 +55,8 @@
 </script>
 
 <form
-  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100 text-neutral-focus"
+  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100
+  text-neutral-focus mt-16"
   method="POST"
   on:submit|preventDefault={(e) => crearUsuario(e)}
 >
@@ -124,7 +125,7 @@
           <span class="label-text">Fecha de Nacimiento</span>
         </p>
         <SveltyPicker
-          inputClasses="input input-bordered "
+          inputClasses="input input-bordered"
           format="dd-mm-yyyy"
           placeholder="DD-MM-YYYY"
           todayBtn={false}
