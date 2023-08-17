@@ -244,7 +244,7 @@
         <div class="grid lg:grid-cols-2 lg:gap-10 mb-3">
           <div>
             <a
-              href="https://wa.me/+50766302373"
+              href="https://wa.me/+50763628879"
               class="text-lg mb-2 flex place-items-center gap-2"
               target="_blank"
             >
