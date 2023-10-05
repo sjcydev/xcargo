@@ -14,7 +14,7 @@
     </p>
   </div>
   <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <a href="https://www.instagram.com/xcargoservices"
+    <a href="https://www.instagram.com/xcargoservicespty507"
       ><Fa icon={faInstagram} class="text-3xl" /></a
     >
   </div>

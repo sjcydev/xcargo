@@ -66,7 +66,11 @@
         <h1
           class="titulo mb-5 text-4xl min-[1024px]:text-6xl min-[1235px]:text-8xl font-semibold"
         >
-          Delivery <span class="block">Rápido & Seguro</span>
+          Delivery <span class="block"
+            >Rápido & Seguro <span class="block mt-2 text-sm lg:text-lg"
+              >Panamá 🇵🇦 507</span
+            ></span
+          >
         </h1>
         <p class="mb-5 min-[1235px]:text-lg">
           Te facilitamos tus compras por internet. Recibe todas tus compras del
@@ -77,9 +81,7 @@
           on:click={() => goto("/registrar")}>Abre tu Casillero Gratis</button
         >
       </div>
-      <div class="">
-        <AbrirCasillero />
-      </div>
+      <AbrirCasillero />
     </div>
   {/if}
 </div>

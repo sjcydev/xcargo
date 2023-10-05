@@ -56,7 +56,7 @@
 </script>
 
 <form
-  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100
+  class="card flex-shrink-0 lg:max-w-lg w-full shadow-2xl bg-base-100
   text-neutral-focus {$page.url.pathname === '/registrar'
     ? 'my-16'
     : ''} lg:my-0"
